@@ -27,7 +27,7 @@ jobs:
       - name: Add SSH key
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.HOSTKEY2 }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.HOSTINGER_SSH_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -p 65002 157.173.209.182 >> ~/.ssh/known_hosts
 
