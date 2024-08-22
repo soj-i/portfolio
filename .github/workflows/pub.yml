@@ -24,6 +24,9 @@ jobs:
       - name: Build the project
         run: npm run build
 
+      - name: Install sshpass
+        run: sudo apt-get install sshpass
+
       - name: Add SSH key
         run: |
           mkdir -p ~/.ssh
@@ -33,4 +36,4 @@ jobs:
 
       - name: Deploy to Hostinger
         run: |
-          scp -P 65002 -r .next/* u658718463@157.173.209.182:/home/u658718463/domains/soj-i.me/public_html/
+          sshpass -p "${{ secrets.HOSTINGER_PASSWORD }}" scp -P 65002 -r .next/* u658718463@157.173.209.182:/home/u658718463/domains/soj-i.me/public_html/
