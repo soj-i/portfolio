@@ -1,0 +1,38 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project
+        run: npm run build
+
+      - name: Install sshpass
+        run: sudo apt-get install sshpass
+
+      - name: Add SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.HOSTINGER_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -p 65002 157.173.209.182 >> ~/.ssh/known_hosts
+      - name: Deploy to Hostinger
+        run: |
+          sshpass -p "${{ secrets.HOSTINGER_PASSWORD }}" scp -P 65002 -r .next/* u658718463@157.173.209.182:/home/u658718463/domains/soj-i.me/public_html/
