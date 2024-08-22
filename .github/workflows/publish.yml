@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '18' # Update to your Node.js version if needed
 
       - name: Install dependencies
         run: npm install
@@ -26,4 +26,5 @@ jobs:
 
       - name: Deploy to Hostinger
         run: |
-          scp -r .next/* u658718463@157.173.209.182:/home/u658718463/public_html/
+          npm run export
+          scp -P 65002 -r out/* u658718463@157.173.209.182:/home/u658718463/public_html/
