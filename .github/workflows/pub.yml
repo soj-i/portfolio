@@ -3,7 +3,7 @@ name: Deploy to Hostinger
 on:
   push:
     branches:
-      - main  # Changed from 'build' to 'main'
+      - main
 
 jobs:
   build:
@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          ref: build  # Checkout the build branch
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
