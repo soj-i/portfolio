@@ -3,7 +3,7 @@ name: Deploy to Hostinger
 on:
   push:
     branches:
-      - build  # Changed from 'main' to 'build'
+      - main  # Changed from 'build' to 'main'
 
 jobs:
   build:
