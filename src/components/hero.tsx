@@ -88,7 +88,7 @@ export default function Hero() {
     </div>
       
   <div className="absolute z-40 bottom-20 right-60 transform translate-x-1/2 md:right-20 lg:right-40 xl:right-60">
-  <img src="/images/giphy.gif" alt="Animated sprite" className="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64" />
+  <Image src="/images/giphy.gif" alt="Animated sprite" className="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64" width={10} height={10} />
   </div>
 
       {/* Snowfall Effect (Top Layer) */}

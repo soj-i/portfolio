@@ -1,6 +1,7 @@
 import data from "@/data.json";
 import React from 'react';
 import './test.css'; // Ensure your CSS is correctly referenced
+import Image from "next/image";
 
 export default function Skills() {
   return (
@@ -11,7 +12,7 @@ export default function Skills() {
 
       <div className="skills-container mt-12 md:mt-32">
         <div className="background-box">
-          <img src="/images/lastskill.png" alt="Skills Graph" className="collage" />
+          <Image src="/images/lastskill.png" alt="Skills Graph" className="collage" width={2000} height={1000} />
         </div>
       </div>
     </div>

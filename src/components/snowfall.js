@@ -3,7 +3,6 @@
 import React, { useRef, useEffect } from 'react';
 import p5 from 'p5';
 
-
 const Snowfall = () => {
   const sketchRef = useRef();
   let particles = []; // Move particles outside to make it accessible
@@ -11,16 +10,16 @@ const Snowfall = () => {
   useEffect(() => {
     if (typeof window !== "undefined") { // Ensure it's running in the browser
       const sketch = (p) => {
+        const createParticle = () => {
+          let pt = p.createVector(p.random(p.width), 0);
+          particles.push(pt);
+        };
+
         p.setup = () => {
           p.createCanvas(window.innerWidth, window.innerHeight);
           for (let i = 0; i < 5; i++) {
-            createParticle(p);
+            createParticle();
           }
-        };
-
-        const createParticle = (p) => {
-          let pt = p.createVector(p.random(p.width), 0);
-          particles.push(pt);
         };
 
         p.draw = () => {
@@ -34,23 +33,24 @@ const Snowfall = () => {
         };
 
         setInterval(() => {
-          createParticle(p);
+          createParticle();
         }, 6000);
+
+        // Expose generateMoreSnow function globally within the sketch context
+        window.generateMoreSnow = () => {
+          for (let i = 0; i < 10; i++) {
+            createParticle();
+          }
+        };
       };
 
       const p5Instance = new p5(sketch, sketchRef.current);
 
-      // Function to generate more snow particles on click
-      const generateMoreSnow = () => {
-        for (let i = 0; i < 10; i++) {
-          p5Instance.createParticle(p5Instance);
-        }
+      return () => {
+        // Clean up the p5 instance
+        p5Instance.remove();
+        window.generateMoreSnow = undefined; // Clean up the global function
       };
-
-      // Expose generateMoreSnow function globally
-      window.generateMoreSnow = generateMoreSnow;
-
-      return () => p5Instance.remove();
     }
   }, []);
 

@@ -20,7 +20,7 @@ const DynamicText: React.FC = () => {
     }, 3000); // Total time before switching, including animation
 
     return () => clearInterval(interval);
-  }, []);
+  }, [texts.length]); // Ensure `texts.length` is included as a dependency
 
   return (
     <span className={`flipping-text ${isFlipping ? 'flip' : ''} text-[#fcbc30]`}>
