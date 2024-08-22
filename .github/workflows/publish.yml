@@ -26,4 +26,4 @@ jobs:
 
       - name: Deploy to Hostinger
         run: |
-          scp -P 65002 -r public/* u658718463@157.173.209.182:/home/u658718463/domains/soj-i.me/public_html/
+          scp -o StrictHostKeyChecking=no -P 65002 -r public/* u658718463@157.173.209.182:/home/u658718463/domains/soj-i.me/public_html/
