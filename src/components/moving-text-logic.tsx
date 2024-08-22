@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import './letter-flip.css';
+import '../app/globals.css';
 
 const DynamicText: React.FC = () => {
   const texts = ["Creative.", "Music Enthusiast.", "Problem Solver."];
