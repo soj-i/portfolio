@@ -1,6 +1,6 @@
 import data from "@/data.json";
 import React from 'react';
-import './test.css'; // Ensure your CSS is correctly referenced
+import '../../app/globals.css'; // Ensure your CSS is correctly referenced
 import Image from "next/image";
 
 export default function Skills() {
