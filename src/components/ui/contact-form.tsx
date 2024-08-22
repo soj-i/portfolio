@@ -5,7 +5,7 @@ import data from "@/data.json";
 import { Button } from './button';
 import { SendIcon } from 'lucide-react';
 import { useForm, SubmitHandler } from "react-hook-form";
-
+//ignore this comment
 type Inputs = {
   name: string;
   email: string;
