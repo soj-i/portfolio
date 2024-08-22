@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export', // Required for exporting static HTML
+    output: 'export',
     images: {
-      unoptimized: true, // Ensures image compatibility during export
+      unoptimized: true,
     },
   };
   
