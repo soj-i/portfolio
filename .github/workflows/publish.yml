@@ -24,9 +24,11 @@ jobs:
       - name: Build the project
         run: npm run build
 
-      - name: Install sshpass
+      - name: Install sshpass (required for password authentication)
         run: sudo apt-get install sshpass
 
       - name: Deploy to Hostinger
+        env:
+          HOSTINGER_PASSWORD: ${{ secrets.HOSTINGER_PASSWORD }}
         run: |
-          sshpass -p "${{ secrets.HOSTINGER_PASSWORD }}" scp -o StrictHostKeyChecking=no -P 65002 -r public/* u658718463@157.173.209.182:/home/u658718463/domains/soj-i.me/public_html/
+          sshpass -p "$HOSTINGER_PASSWORD" scp -o StrictHostKeyChecking=no -P 65002 -r public/* u658718463@157.173.209.182:/home/u658718463/domains/soj-i.me/public_html/
