@@ -6,6 +6,8 @@ import Link from 'next/link';
 import DynamicText from './moving-text-logic';
 import dynamic from 'next/dynamic';
 
+
+
 // Dynamically import Snowfall with SSR disabled
 const Snowfall = dynamic(() => import('../components/snowfall.js'), { ssr: false });
 

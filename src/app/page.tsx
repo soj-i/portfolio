@@ -6,6 +6,8 @@ import Projects from "@/components/projects";
 import ContactMe from "@/components/ui/contactme";
 import Skills from "@/components/ui/skills";
 
+
+
 export default function Home() {
   return (
   <main> 

@@ -1,6 +1,9 @@
 import data from "@/data.json";
 import ProjectCard from "@/components/project-card";
 
+
+
+
 export default function Projects() {
   return (
     <div className="min-h-screen flex flex-col overflow-hidden p-10 mx-auto bg-gradient-to-b from-[#0180a6] to-[#023e69]">

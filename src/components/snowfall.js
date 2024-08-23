@@ -5,14 +5,14 @@ import p5 from 'p5';
 
 const Snowfall = () => {
   const sketchRef = useRef();
-  let particles = []; // Move particles outside to make it accessible
+  const particles = useRef([]); // Use useRef to ensure a stable reference
 
   useEffect(() => {
     if (typeof window !== "undefined") { // Ensure it's running in the browser
       const sketch = (p) => {
         const createParticle = () => {
           let pt = p.createVector(p.random(p.width), 0);
-          particles.push(pt);
+          particles.current.push(pt);
         };
 
         p.setup = () => {
@@ -24,7 +24,7 @@ const Snowfall = () => {
 
         p.draw = () => {
           p.clear();
-          particles.forEach((pt) => {
+          particles.current.forEach((pt) => {
             pt.y += 2;
             if (pt.y > p.height) pt.y = 0;
             p.fill(255);

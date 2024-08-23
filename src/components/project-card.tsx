@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
+
+
+
 type Props = {
   project: {
     imageUrl: string | null;

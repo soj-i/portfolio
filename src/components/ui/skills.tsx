@@ -3,6 +3,7 @@ import React from 'react';
 import '../../app/globals.css'; // Ensure your CSS is correctly referenced
 import Image from "next/image";
 
+
 export default function Skills() {
   return (
     <div className="min-h-screen flex flex-col overflow-hidden p-10  mx-auto bg-[#23395D]">

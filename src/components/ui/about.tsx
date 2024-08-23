@@ -3,6 +3,7 @@ import { Button } from "./button";
 import { DownloadIcon } from "lucide-react";
 import Link from "next/link";
 
+
 export default function About() {
     return (
     <div className = "min-h-screen flex flex-col overflow-hidden p-10 mx-auto bg-gradient-to-b from-[#08f6f6] to-[#23395D]"
