@@ -5,7 +5,7 @@ import p5 from 'p5';
 
 const Snowfall = () => {
   const sketchRef = useRef();
-  const particles = useRef([]); // Use useRef to ensure a stable reference
+  const particles = useRef([]); // Use useRef to maintain a stable reference across renders
 
   useEffect(() => {
     if (typeof window !== "undefined") { // Ensure it's running in the browser
@@ -17,6 +17,7 @@ const Snowfall = () => {
 
         p.setup = () => {
           p.createCanvas(window.innerWidth, window.innerHeight);
+          // Immediately generate some particles to start with
           for (let i = 0; i < 5; i++) {
             createParticle();
           }
@@ -32,9 +33,18 @@ const Snowfall = () => {
           });
         };
 
-        setInterval(() => {
+        // Use a shorter interval initially to quickly populate the screen
+        const initialInterval = setInterval(() => {
           createParticle();
-        }, 6000);
+        }, 1000);
+
+        // After a few seconds, slow down the particle creation rate
+        setTimeout(() => {
+          clearInterval(initialInterval);
+          setInterval(() => {
+            createParticle();
+          }, 5000);
+        }, 5000); // Slow down after 5 seconds
 
         // Expose generateMoreSnow function globally within the sketch context
         window.generateMoreSnow = () => {
