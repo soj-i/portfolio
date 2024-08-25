@@ -52,11 +52,13 @@ export default function ContactMe() {
       </div>
 
       {/* "Thanks for visiting!" Text positioned at the bottom-right of this section */}
-      <div className="relative">
-        <p className="text-gray-400 text-lg absolute right-32 bottom-2">
-          Thanks for visiting : ]
-        </p>
-      </div>
+      <div className="relative h-32">
+      <p className="text-gray-400 text-lg absolute right-4 bottom-2">
+        Thanks for visiting : ]
+      </p>
+    </div>
+
+
     </div>
   );
 }

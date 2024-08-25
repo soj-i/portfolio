@@ -28,6 +28,8 @@ export default function Hero() {
           <br />
           <br />
           <span className="text-white">{data.role}</span>
+          <br/>
+          <span className="text-white">{data.university}</span>
           <span className="text-white">
             <br />
             <DynamicText />
@@ -45,57 +47,60 @@ export default function Hero() {
       ></div>
 
       {/* Button Container */}
-      <div className="absolute top-1/3 right-36 transform -translate-y-1/2 flex flex-col space-y-8 z-30 items-center text-center md:right-20 lg:right-36">
-        <a
-          href="#about"
-          className="py-6 px-24 md:px-32 lg:px-56 rounded-full bg-[#fcbc30] text-white font-semibold text-lg text-center transition-transform transform hover:scale-110 shadow-lg border-4 border-[#ff8800] hover:bg-[#ff8800] hover:border-[#fcbc30] hover:shadow-xl"
-          style={{ boxShadow: '4px 4px 0px #ff8800' }}
-        >
-          About
-        </a>
-        <a
-          href="#skills"
-          className="py-6 px-24 md:px-32 lg:px-56 rounded-full bg-[#fcbc30] text-white font-semibold text-lg text-center transition-transform transform hover:scale-110 shadow-lg border-4 border-[#ff8800] hover:bg-[#ff8800] hover:border-[#fcbc30] hover:shadow-xl"
-          style={{ boxShadow: '4px 4px 0px #ff8800' }}
-        >
-          Skills
-        </a>
-        <a
-          href="#projects"
-          className="py-6 px-24 md:px-32 lg:px-56 rounded-full bg-[#fcbc30] text-white font-semibold text-lg text-center transition-transform transform hover:scale-110 shadow-lg border-4 border-[#ff8800] hover:bg-[#ff8800] hover:border-[#fcbc30] hover:shadow-xl"
-          style={{ boxShadow: '4px 4px 0px #ff8800' }}
-        >
-          Projects
-        </a>
-        <a
-          href="#contact-me"
-          className="py-6 px-24 md:px-32 lg:px-56 rounded-full bg-[#fcbc30] text-white font-semibold text-lg text-center transition-transform transform hover:scale-110 shadow-lg border-4 border-[#ff8800] hover:bg-[#ff8800] hover:border-[#fcbc30] hover:shadow-xl"
-          style={{ boxShadow: '4px 4px 0px #ff8800' }}
-        >
-          Contact
-        </a>
-        <a
-          href="/images/Oduneye-Olusoji-June2025.pdf"
-          target="_blank"
-          className="py-6 px-24 md:px-32 lg:px-56 rounded-full bg-[#fcbc30] text-white font-semibold text-lg text-center transition-transform transform hover:scale-110 shadow-lg border-4 border-[#ff8800] hover:bg-[#ff8800] hover:border-[#fcbc30] hover:shadow-xl"
-          style={{ boxShadow: '4px 4px 0px #ff8800' }}
-        >
-          Resume
-        </a>
-      </div>
+          <div className="absolute top-1/3 right-0 transform -translate-y-1/2 flex flex-col space-y-8 z-30 items-center text-center px-4 md:right-20 lg:right-36">
+      <a
+        href="#about"
+        className="py-4 px-20 md:px-28 lg:px-48 rounded-full bg-[#fcbc30] text-white font-semibold text-sm md:text-lg lg:text-xl text-center transition-transform transform hover:scale-110 shadow-lg border-4 border-[#ff8800] hover:bg-[#ff8800] hover:border-[#fcbc30] hover:shadow-xl"
+        style={{ boxShadow: '4px 4px 0px #ff8800' }}
+      >
+        About
+      </a>
+      <a
+        href="#skills"
+        className="py-4 px-20 md:px-28 lg:px-48 rounded-full bg-[#fcbc30] text-white font-semibold text-sm md:text-lg lg:text-xl text-center transition-transform transform hover:scale-110 shadow-lg border-4 border-[#ff8800] hover:bg-[#ff8800] hover:border-[#fcbc30] hover:shadow-xl"
+        style={{ boxShadow: '4px 4px 0px #ff8800' }}
+      >
+        Skills
+      </a>
+      <a
+        href="#projects"
+        className="py-4 px-20 md:px-28 lg:px-48 rounded-full bg-[#fcbc30] text-white font-semibold text-sm md:text-lg lg:text-xl text-center transition-transform transform hover:scale-110 shadow-lg border-4 border-[#ff8800] hover:bg-[#ff8800] hover:border-[#fcbc30] hover:shadow-xl"
+        style={{ boxShadow: '4px 4px 0px #ff8800' }}
+      >
+        Projects
+      </a>
+      <a
+        href="#contact-me"
+        className="py-4 px-20 md:px-28 lg:px-48 rounded-full bg-[#fcbc30] text-white font-semibold text-sm md:text-lg lg:text-xl text-center transition-transform transform hover:scale-110 shadow-lg border-4 border-[#ff8800] hover:bg-[#ff8800] hover:border-[#fcbc30] hover:shadow-xl"
+        style={{ boxShadow: '4px 4px 0px #ff8800' }}
+      >
+        Contact
+      </a>
+      <a
+        href="/images/Oduneye-Olusoji-June2025.pdf"
+        target="_blank"
+        className="py-4 px-20 md:px-28 lg:px-48 rounded-full bg-[#fcbc30] text-white font-semibold text-sm md:text-lg lg:text-xl text-center transition-transform transform hover:scale-110 shadow-lg border-4 border-[#ff8800] hover:bg-[#ff8800] hover:border-[#fcbc30] hover:shadow-xl"
+        style={{ boxShadow: '4px 4px 0px #ff8800' }}
+      >
+        Resume
+      </a>
+    </div>
+
 
      
 
      
-      <div className="absolute z-40 bottom-20 right-1/2 transform translate-x-1/2 md:right-20 lg:right-40 xl:right-60">
+    <div className="absolute z-40 bottom-20 right-0 md:right-30 lg:right-30 xl:right-50">
       <Image
         src="/images/giphy.gif"
         alt="Animated sprite"
         className="w-[20vw] h-[20vw] max-w-[64px] max-h-[64px] md:max-w-[128px] md:max-h-[128px] lg:max-w-[256px] lg:max-h-[256px]"
         width={10}
         height={10}
-        />
-      </div>
+      />
+    </div>
+
+
 
 
       {/* Snowfall Effect (Top Layer) */}
