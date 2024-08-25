@@ -6,7 +6,7 @@ import '@/app/globals.css';
 
 
 const DynamicText: React.FC = () => {
-  const texts = ["Creative.", "Music Enthusiast.", "Problem Solver."];
+  const texts = ["Creative", "Software Developer", "Music Enthusiast","Tech Enthusiast"];
   const [index, setIndex] = useState(0);
   const [isFlipping, setIsFlipping] = useState(false);
 

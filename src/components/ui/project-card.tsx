@@ -35,7 +35,7 @@ export default function ProjectCard({ project }: Props) {
           src={project.imageUrl || "/images/default.png"} // Fallback image if imageUrl is null
           alt={project.title}
           width={400}
-          height={300}
+          height={400}
           className="rounded-lg object-cover"
         />
       )}

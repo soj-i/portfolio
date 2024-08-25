@@ -17,8 +17,13 @@ export default function About() {
                         <h2 className = "font-semibold text-3xl x1:text-4xl leading-relaxed xl:leading-loose">
                             {data.bio}
                         </h2>
-                        </div>
-    
+                    </div>
+                    <div>
+                        <br></br> <br></br> <br></br>
+                        <h2 className = "font-semibold text-3xl x1:text-4xl leading-relaxed xl:leading-loose">
+                            Looking for 2025 software engineering, product management, ui/ux design, or cybersecurity opportunities.
+                        </h2>
+                    </div>
                     </div>
 
             </div>
