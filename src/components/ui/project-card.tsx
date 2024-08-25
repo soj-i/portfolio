@@ -24,7 +24,7 @@ export default function ProjectCard({ project }: Props) {
         <video
           controls
           className="rounded-lg object-cover"
-          width={400}
+          width={450}
           height={400}
         >
           <source src={project.videoUrl} type= "video/mp4" />
@@ -34,7 +34,7 @@ export default function ProjectCard({ project }: Props) {
         <Image
           src={project.imageUrl || "/images/default.png"} // Fallback image if imageUrl is null
           alt={project.title}
-          width={400}
+          width={450}
           height={400}
           className="rounded-lg object-cover"
         />
