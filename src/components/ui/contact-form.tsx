@@ -60,17 +60,19 @@ export default function ContactForm() {
         className="w-full h-48 p-4 bg-[#4A4A4A] text-white rounded-3xl border-none focus:outline-none focus:ring-2 focus:ring-[#fcbc30] focus:ring-opacity-50"
       />
 
-      <div className="flex justify-center xl:justify-start">
+      <div className="flex justify-center xl:justify-start w-full">
         <Button
           type="submit"
-          className="rounded-full uppercase font-semibold text-xl py-4 px-48 bg-[#fcbc30] text-white transition-transform transform hover:scale-110 shadow-lg border-4 border-[#ff8800] hover:bg-[#ff8800] hover:border-[#fcbc30] hover:shadow-xl"
+          className="w-full rounded-full uppercase font-semibold text-lg py-3 bg-[#fcbc30] text-white transition-transform transform hover:scale-110 shadow-lg border-4 border-[#ff8800] hover:bg-[#ff8800] hover:border-[#fcbc30] hover:shadow-xl"
           style={{
             boxShadow: "4px 4px 0px #ff8800",
           }}
         >
-          Send Message <SendIcon className="ml-2 w-6 h-6" />
+          Send Message <SendIcon className="ml-2 w-5 h-5 md:w-6 md:h-6" />
         </Button>
       </div>
+
+
     </form>
   );
 }
