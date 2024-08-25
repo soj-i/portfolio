@@ -1,10 +1,9 @@
-import Hero from "@/components/hero";
-import Image from "next/image";
-import About from "@/components/ui/about";
-import Experiences from "@/components/ui/experiences";
-import Projects from "@/components/projects";
-import ContactMe from "@/components/ui/contactme";
-import Skills from "@/components/ui/skills";
+import Hero from "@/app/hero/page";
+import About from "@/app/about/page";
+import Experiences from "@/app/experience/page";
+import Projects from "@/app/projects/page";
+import ContactMe from "@/app/contact-me/page";
+import Skills from "@/app/skills/page";
 
 
 

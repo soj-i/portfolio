@@ -75,28 +75,28 @@
       "title": "Secure To-Do List",
       "url": "https://www.google.com",
       "description": "This full-stack to-do list application was built using Next.js with a focus on security and scalability. The project integrates Docker to ensure consistent environment configurations and employs advanced security protocols, including cryptographic hashing and token-driven authentication, to protect user data. The application was developed using domain-driven design principles, with seamless backend and frontend integration. Manual testing was implemented for product security, along with Unix permission configurations to prevent unauthorized access and maintain system integrity.",
-      "videoUrl": "/videos/To-Do-Demo.mp4"
+      "videoUrl": "https://qludjbpgtw1mzw7j.public.blob.vercel-storage.com/To-Do-Demo-UGuXWvNlhbHFE057POCv27EwVbVAEf.mp4"
     },
     {
         "imageUrl": null,
           "title": "Wildcat Track @ NU",
           "url": "https://github.com/soj-i/OpenSM",
           "description": "This project focuses on utilizing OpenStreetMap (OSM) data to create a navigation system specifically tailored for Northwestern University's Evanston campus. The system reads and processes map data from XML documents, making it adaptable for other universities or communities. This data is used to build a graph representation of the campus, including nodes and footways, which are then leveraged to calculate optimal routes. Technologies used include C++, data structures (maps, vectors), XML parsing, and algorithms (graph traversal, shortest path).",
-          "videoUrl": "/videos/OSM-Demo.mp4"
+          "videoUrl": "https://qludjbpgtw1mzw7j.public.blob.vercel-storage.com/OSM-Demo-L18nkBA0hml2rstWXeCwNcTdXN96EC.mp4"
     },
     {
         "imageUrl": null,
           "title": "TunePad Tunes",
           "url": "https://tunepad.com/collection",
           "description": "As part of my volunteer work teaching computer science to 5th graders in Evanston, I developed two well-known songs using Python-styled code to create a connection between coding and music. The project was designed to introduce young students to core programming concepts in a creative and engaging way. These tunes were integrated into the TunePad Project’s website, which serves as a resource for over 300 elementary school students annually in Evanston, IL. Through this project, I helped students explore the intersection of technology and the arts, inspiring their interest in both music and computer science.",
-          "videoUrl": "/videos/TunePad-Demo.mp4"
+          "videoUrl": "https://qludjbpgtw1mzw7j.public.blob.vercel-storage.com/TunePad-Demo-y3fORKPOlvshd3gHISdlGYotMEAThf.mp4"
         },
         {
             "imageUrl": null,
               "title": "Virtual Masks",
               "url": "https://glitch.com/~melted-joyous-trouser",
               "description": "This project allows users to create and customize virtual masks with dynamic features using p5.js and Vue.js. The virtual masks use linear interpolation to provide smooth and responsive animations, allowing for features like adjustable particle effects, spikes, and facial overlays that react to the user’s movements. These masks are designed to be both visually engaging and highly customizable, offering a range of adjustable parameters such as mask speed, particle lifespan, and more. Leveraging p5’s drawing capabilities and Vue’s reactive components, the masks can be tailored to suit each user’s personal aesthetic, creating an experience that is both interactive and unique.",
-              "videoUrl": "/videos/Virtual-Masks-Demo.mp4"
+              "videoUrl": "https://qludjbpgtw1mzw7j.public.blob.vercel-storage.com/Virtual-Masks-Demo-xwuqOeciBGHVryhKcYSbotKIJtt5KB.mp4"
         }
   ]
 }

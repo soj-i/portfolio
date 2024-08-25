@@ -2,7 +2,7 @@
 
 import React from 'react';
 import data from "@/data.json";
-import { Button } from './button';
+import { Button } from '@/components/ui/button';
 import { SendIcon } from 'lucide-react';
 import { useForm, SubmitHandler } from "react-hook-form";
 
