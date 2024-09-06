@@ -77,7 +77,7 @@ export default function Hero() {
     Contact
   </a>
   <a
-    href="/images/Olusoji_Oduneye_Jun2026.pdf"
+    href="/images/Olusoji_Oduneye_June2026.pdf"
     target="_blank"
     className="w-full py-4 px-8 text-sm md:text-base lg:text-lg xl:text-xl rounded-full bg-[#fcbc30] text-white font-semibold text-center transition-transform transform hover:scale-110 shadow-lg border-4 border-[#ff8800] hover:bg-[#ff8800] hover:border-[#fcbc30] hover:shadow-xl"
     style={{ boxShadow: '4px 4px 0px #ff8800' }}
