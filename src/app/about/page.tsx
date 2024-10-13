@@ -16,7 +16,7 @@ export default function About() {
           </h2>
           <br />
           <h2 className="font-semibold text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-relaxed xl:leading-loose">
-            Looking for 2025 software engineering, product management, UI/UX design, or cybersecurity opportunities.
+            I'm currently looking for 2025 software engineering, project management, UI/UX design, or cybersecurity opportunities.
           </h2>
         </div>
       </div>

@@ -2,8 +2,8 @@
     "name": "Soji Oduneye",
     "role": "CS & Music @",
     "university": "Northwestern",
-    "bio": "Hi, I’m Soji, a creative engineer passionate about crafting experiences that bring joy, learning, and growth. As a double major in Computer Science and Music at Northwestern University, I thrive at the intersection of technology and art. Whether I’m building software, composing music, or blending the two, my goal is to design meaningful moments for others. From innovative tech solutions to immersive soundscapes, I strive to make the world a more engaging and inspiring place. ",
-    "age" : 21,
+    "bio": "Hi, I’m Soji, a creative engineer passionate about crafting experiences that bring joy, learning, and growth. I thrive at the intersection of technology and art. Outside of tech, I love being a mentor for fellow first-generation low-income students!",
+    "age" : 22,
     "location": "Evanston, IL",
     "phone": "219-306-6911",
     "email": "soji@u.northwestern.edu",
@@ -19,13 +19,11 @@
                         ] 
         },
         {
-        "year": "June 2024 - Present",
+        "year": "June 2024 - September 2024",
         "title": "Software & Hardware Engineer Intern",
         "company": "Technological Innovations for Inclusive Learning and Teaching Laboratory (tiilt)",
         "description": ["Led development and prototyping of a wearable sensor for ACL recovery, successfully integrating core functionalities to monitor key recovery metrics for athletes and physical therapists.",
-        "Researched and selected suitable PCBs and Arduinos, translating high-level code into efficient system-level C code for seamless integration and performance optimization.",
-        "Set to contribute to the development of a Swift-based mobile app, planning to incorporate three.js and React frameworks for real-time data visualization and user interaction."
-        ]
+        "Researched and selected suitable PCBs and Arduinos, translating high-level code into efficient system-level C code for seamless integration and performance optimization."]
         },
         {
         "year": "January 2024 - June 2024",
