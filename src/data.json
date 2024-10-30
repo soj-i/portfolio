@@ -15,7 +15,7 @@
         "company": "Northwestern University",
         "description": [" Assist in delivering a practical, defense-focused introduction to cybersecurity principles by guiding students through full-stack security practices, covering key topics such as threat modeling, application security, cryptography, and access control, while emphasizing both technical skills and ethical decision-making.",
                         "Provide hands-on support for programming assignments, in-class activities, and timed assessments, helping students apply fundamental security concepts to real-world applications using languages like C, C++, and JavaScript, ensuring they understand secure system design from the ground up."
-                        ,"Lead discussions, offer personalized feedback, and create an engaging learning environment that prepares students for careers in cybersecurity or equips them with the skills to incorporate foundational security practices into any software or system they develop."
+
                         ] 
         },
         {
