@@ -2,7 +2,7 @@
     "name": "Soji Oduneye",
     "role": "CS & Music @",
     "university": "Northwestern",
-    "bio": "Hi, I’m Soji, an aspiring engineer passionate about crafting experiences that bring joy, learning, and growth. I thrive at the intersection of tech and art. Outside of academia, I love being a mentor for fellow first-generation low-income students!",
+    "bio": "Hi, I’m Soji, a creative engineer passionate about crafting experiences that bring joy, learning, and growth. I thrive at the intersection of technology and art. Outside of tech, I love being a mentor for fellow first-generation low-income students!",
     "age" : 22,
     "location": "Evanston, IL",
     "phone": "219-306-6911",
@@ -67,6 +67,13 @@
       "url": "https://github.com/hanniavalera/block-music",
       "description": "Block Music is an interactive experience that allows users to create music by physically arranging puzzle pieces that represent various musical pitches and note values. Designed for learners of all ages, the project helps teach the fundamentals of music creation in a hands-on way. I developed backend logic using Python, OpenCV, and Tesseract OCR to interpret and convert the puzzle arrangements into sound. The project was successfully demoed by over 100 elementary and middle school students in Evanston, enhancing their understanding of music and coding through play.",
       "videoUrl": null
+    },
+    {
+    "imageUrl": "/images/todo-title.png",
+      "title": "Secure To-Do List",
+      "url": "https://www.google.com",
+      "description": "This full-stack to-do list application was built using Next.js with a focus on security and scalability. The project integrates Docker to ensure consistent environment configurations and employs advanced security protocols, including cryptographic hashing and token-driven authentication, to protect user data. The application was developed using domain-driven design principles, with seamless backend and frontend integration. Manual testing was implemented for product security, along with Unix permission configurations to prevent unauthorized access and maintain system integrity.",
+      "videoUrl": "https://qludjbpgtw1mzw7j.public.blob.vercel-storage.com/To-Do-Demo-UGuXWvNlhbHFE057POCv27EwVbVAEf.mp4"
     },
     {
         "imageUrl": null,
