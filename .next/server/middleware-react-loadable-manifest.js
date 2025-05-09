@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"app/hero/page.tsx -> @/components/snowfall.js\":{\"id\":\"app/hero/page.tsx -> @/components/snowfall.js\",\"files\":[\"static/chunks/_app-pages-browser_src_components_snowfall_js.js\"]}}"

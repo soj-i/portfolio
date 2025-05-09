@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className = {poppins.className}>
-        <div className = "bg-[#222] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden no-scrollbar">
+        <div className = "text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden no-scrollbar">
         {children}
         </div>
         </body>

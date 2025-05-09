@@ -1,6 +1,6 @@
 import React from "react";
 import data from "@/data.json";
-import ExperienceCard from "@/components/ui/experience-card";
+import ExperienceCard from "@/components/organisms/experience-card";
 
 export default function Experiences() {
     return (<div className = "min-h-screen flex flex-col overflow-hidden p-10 max-w-7x1 mx-auto bg-gradient-to-b from-[#23395D] to-[#0180a6]">

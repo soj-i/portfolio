@@ -29,6 +29,7 @@ export default function ProjectCard({ project }: Props) {
           <Image
             src={project.imageUrl || "/images/default.png"} // Fallback image if imageUrl is null
             alt={project.title}
+            aria-label={project.title}
             width={450}
             height={400}
             className="w-full rounded-lg object-cover"
@@ -38,9 +39,14 @@ export default function ProjectCard({ project }: Props) {
       </div>
 
       {/* Text Section */}
-      <div className="w-full md:w-1/2">
+      <main 
+      aria-label={`Project: ${project.title}`}
+      className="w-full md:w-1/2">
         <h2 className="text-2xl md:text-3xl font-bold">{project.title}</h2>
-        <p className="mt-4 text-gray-200 text-lg leading-relaxed md:text-xl xl:leading-loose">
+        <p 
+        alt-text={project.description}
+        aria-label={project.description}
+        className="mt-4 text-gray-200 text-lg leading-relaxed md:text-xl xl:leading-loose">
           {project.description}
         </p>
         <Link
@@ -51,7 +57,7 @@ export default function ProjectCard({ project }: Props) {
         >
           View Project
         </Link>
-      </div>
+      </main>
     </div>
   );
 }

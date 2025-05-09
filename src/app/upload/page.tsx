@@ -1,4 +1,4 @@
-import UploadForm from "@/components/ui/form";
+import UploadForm from "@/components/atoms/form";
 
 
 export default function Page() {

@@ -1,70 +1,90 @@
 "use client";
-
-import React, { useRef, useEffect } from 'react';
-import p5 from 'p5';
+import React, { useRef, useEffect } from "react";
+import p5 from "p5";
+import { useSnowfall } from "@/app/contexts/SnowfallContext";
 
 const Snowfall = () => {
+  const { isSnowing } = useSnowfall(); // Access the snow state from the context
   const sketchRef = useRef();
-  const particles = useRef([]); // Use useRef to maintain a stable reference across renders
+  const particles = useRef([]);
+  const p5InstanceRef = useRef(null); // Keep a reference to the p5 instance
 
   useEffect(() => {
-    if (typeof window !== "undefined") { // Ensure it's running in the browser
+    if (!isSnowing) {
+      // If snowing is disabled, clean up the p5 instance
+      if (p5InstanceRef.current) {
+        p5InstanceRef.current.remove();
+        p5InstanceRef.current = null;
+      }
+      return;
+    }
+
+    if (typeof window !== "undefined") {
       const sketch = (p) => {
         const createParticle = () => {
-          let pt = p.createVector(p.random(p.width), 0);
-          particles.current.push(pt);
+          const x = Math.random() * p.width; // Randomize x position
+          const y = Math.random(); // Start at the top of the canvas
+          particles.current.push(p.createVector(x, y));
         };
 
         p.setup = () => {
           p.createCanvas(window.innerWidth, window.innerHeight);
-          // Immediately generate some particles to start with
-          for (let i = 0; i < 5; i++) {
-            createParticle();
-          }
-        };
-
-        p.draw = () => {
-          p.clear();
-          particles.current.forEach((pt) => {
-            pt.y += 2;
-            if (pt.y > p.height) pt.y = 0;
-            p.fill(255);
-            p.ellipse(pt.x, pt.y, 10, 10);
-          });
-        };
-
-        // Use a shorter interval initially to quickly populate the screen
-        const initialInterval = setInterval(() => {
-          createParticle();
-        }, 1000);
-
-        // After a few seconds, slow down the particle creation rate
-        setTimeout(() => {
-          clearInterval(initialInterval);
-          setInterval(() => {
-            createParticle();
-          }, 5000);
-        }, 5000); // Slow down after 5 seconds
-
-        // Expose generateMoreSnow function globally within the sketch context
-        window.generateMoreSnow = () => {
           for (let i = 0; i < 10; i++) {
             createParticle();
           }
         };
+        
+        
+        p.draw = () => {
+          p.clear();
+          particles.current.forEach((pt) => {
+            pt.y += 2; // Move the particle down
+            if (pt.y > p.height) {
+              pt.y = Math.floor(Math.random() * (0 - (-30) + 1) + (-30))
+            // th.floor(Math.random() * (max - min + 1)) + min
+            } // Reset the particle to the top if it goes off-screen
+            p.fill(255);
+            p.noStroke();
+            p.ellipse(pt.x, pt.y, 10, 10);
+          });
+
+          // Limit the number of particles to avoid overcrowding
+          if (particles.current.length > 80) {
+            particles.current.shift(); // Remove the oldest particle
+          }
+        };
+
+        const particleInterval = setInterval(() => {
+          createParticle();
+        }, 800); // new particles 800ms
+
+        // Handle window resize
+        const handleResize = () => {
+          p.resizeCanvas(window.innerWidth, window.innerHeight);
+        };
+        window.addEventListener("resize", handleResize);
+
+        // Cleanup function for the sketch
+        p.cleanup = () => {
+          clearInterval(particleInterval);
+          window.removeEventListener("resize", handleResize);
+        };
       };
 
-      const p5Instance = new p5(sketch, sketchRef.current);
+      // Create the p5 instance
+      p5InstanceRef.current = new p5(sketch, sketchRef.current);
 
       return () => {
         // Clean up the p5 instance
-        p5Instance.remove();
-        window.generateMoreSnow = undefined; // Clean up the global function
+        if (p5InstanceRef.current) {
+          p5InstanceRef.current.remove();
+          p5InstanceRef.current = null;
+        }
       };
     }
-  }, []);
+  }, [isSnowing]); // Re-run the effect when `isSnowing` changes
 
-  return <div ref={sketchRef}></div>;
+  return isSnowing ? <div ref={sketchRef}></div> : null;
 };
 
 export default Snowfall;

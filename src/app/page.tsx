@@ -4,34 +4,15 @@ import Experiences from "@/app/experience/page";
 import Projects from "@/app/projects/page";
 import ContactMe from "@/app/contact-me/page";
 import Skills from "@/app/skills/page";
-
+import { SnowfallProvider } from "./contexts/SnowfallContext";
 
 
 export default function Home() {
   return (
-  <main> 
-    <section>
+  
+      <SnowfallProvider>
       <Hero />
-      </section>
-
-    <section id = "about">
-      <About/>
-      </section>
-
-    <section id = "skills">
-      <Skills/>
-      </section>
-
-    <section id = "experiences">
-      <Experiences/>
-    </section>
-
-    <section id = "projects"> 
-      <Projects /> </section>
-
-    <section id = "contact-me">
-      <ContactMe/>
-    </section>
-  </main>
+      </SnowfallProvider>
+ 
   );
 }
