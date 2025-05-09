@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 
 import './globals.css';
+import { SnowfallProvider } from "./contexts/SnowfallContext";
 
 
 const poppins = Poppins({
@@ -21,8 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className = {poppins.className}>
+        
         <div className = "text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden no-scrollbar">
-        {children}
+          <SnowfallProvider>
+          {children}
+          </SnowfallProvider>
         </div>
         </body>
     </html>
